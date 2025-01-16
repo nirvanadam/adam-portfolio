@@ -5,7 +5,6 @@ import Home from "../pages/home/Home";
 import About from "../pages/about/About";
 import Experience from "../pages/experience/Experience";
 import Contact from "../pages/contact/Contact";
-import Navbar from "../components/navbar/Navbar";
 
 function Routers() {
   return (

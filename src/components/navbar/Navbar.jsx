@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router";
 import { AppContext } from "../../context/AppContext";
+import { Fade } from "react-reveal";
 
 function Navbar() {
   const { showMenu, setShowMenu, toggleShowMenu } = useContext(AppContext);
@@ -16,7 +17,7 @@ function Navbar() {
   return (
     <div>
       <nav
-        className={`${showMenu ? "z-[999]" : "-z-10 delay-[1500ms]"} fixed flex h-screen w-full`}
+        className={`${showMenu ? "z-[999]" : "-z-10"} fixed flex h-screen w-full`}
       >
         <span
           className={`${showMenu ? "translate-y-0" : "-translate-y-full delay-[900ms]"} z-[999] h-screen w-1/3 bg-background-secondary transition-all duration-300`}
@@ -29,8 +30,8 @@ function Navbar() {
         />
 
         <div className="absolute left-1/2 top-1/2 z-[999] flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-10 uppercase text-textColor-primary">
-          <Link
-            to="/"
+          <a
+            href="/"
             className={`${showMenu ? "translate-x-0 delay-[900ms]" : "-translate-x-[300%] delay-0 lg:-translate-x-[500%] xl:-translate-x-[600%]"} group relative flex flex-col items-center overflow-hidden text-[10vw] font-medium transition-all duration-300 sm:text-[8vw] lg:text-[6vw] xl:text-[4vw]`}
           >
             <div className="flex gap-5 transition-all duration-300 group-hover:gap-3">
@@ -48,10 +49,10 @@ function Navbar() {
             <h1 className="absolute translate-y-full transition-all duration-300 group-hover:translate-y-0">
               Home
             </h1>
-          </Link>
+          </a>
 
-          <Link
-            to="/about"
+          <a
+            href="/about"
             className={`${showMenu ? "translate-x-0 delay-[900ms]" : "translate-x-[300%] delay-0 lg:translate-x-[500%] xl:translate-x-[600%]"} group relative flex flex-col items-center overflow-hidden text-[10vw] font-medium transition-all duration-300 sm:text-[8vw] lg:text-[6vw] xl:text-[4vw]`}
           >
             <div className="flex gap-5 transition-all duration-300 group-hover:gap-3">
@@ -69,10 +70,10 @@ function Navbar() {
             <h1 className="absolute translate-y-full transition-all duration-300 group-hover:translate-y-0">
               About
             </h1>
-          </Link>
+          </a>
 
-          <Link
-            to="/experience"
+          <a
+            href="/experience"
             className={`${showMenu ? "translate-x-0 delay-[900ms]" : "-translate-x-[300%] delay-0 lg:-translate-x-[500%] xl:-translate-x-[600%]"} group relative flex flex-col items-center overflow-hidden text-[10vw] font-medium transition-all duration-300 sm:text-[8vw] lg:text-[6vw] xl:text-[4vw]`}
           >
             <div className="flex gap-5 transition-all duration-300 group-hover:gap-3">
@@ -90,10 +91,10 @@ function Navbar() {
             <h1 className="absolute translate-y-full transition-all duration-300 group-hover:translate-y-0">
               Experience
             </h1>
-          </Link>
+          </a>
 
-          <Link
-            to="/contact"
+          <a
+            href="/contact"
             className={`${showMenu ? "translate-x-0 delay-[900ms]" : "translate-x-[300%] delay-0 lg:translate-x-[500%] xl:translate-x-[600%]"} group relative flex flex-col items-center overflow-hidden text-[10vw] font-medium transition-all duration-300 sm:text-[8vw] lg:text-[6vw] xl:text-[4vw]`}
           >
             <div className="flex gap-5 transition-all duration-300 group-hover:gap-3">
@@ -111,35 +112,39 @@ function Navbar() {
             <h1 className="absolute translate-y-full transition-all duration-300 group-hover:translate-y-0">
               Contact
             </h1>
-          </Link>
+          </a>
         </div>
       </nav>
 
       <header
         className={`flex h-[8vh] w-full items-center justify-between bg-black px-6 text-textColor-primary md:px-10 lg:h-[10vh] xl:px-20 2xl:px-28`}
       >
-        <Link
-          to="/"
-          className={`z-[999] text-lg font-medium uppercase text-textColor-primary transition 2xl:text-2xl`}
-        >
-          Adam<span className="text-textColor-accent">.</span>
-        </Link>
+        <Fade bottom>
+          <a
+            href="/"
+            className={`z-[999] text-lg font-medium uppercase text-textColor-primary transition 2xl:text-2xl`}
+          >
+            Adam<span className="text-textColor-accent">.</span>
+          </a>
+        </Fade>
 
-        <button
-          type="button"
-          onClick={toggleShowMenu}
-          className={`z-[999] flex h-4 w-9 flex-col justify-between`}
-        >
-          <span
-            className={`${showMenu ? "w-full translate-y-[10px] rotate-[45deg]" : ""} h-[2px] w-1/2 bg-white transition-all duration-[600ms]`}
-          ></span>
-          <span
-            className={`${showMenu ? "scale-0" : "scale-100"} h-[2px] w-full bg-white transition-all duration-[600ms]`}
-          ></span>
-          <span
-            className={`${showMenu ? "w-full -translate-y-[5px] -rotate-[45deg]" : ""} h-[2px] w-1/2 self-end bg-white transition-all duration-[600ms]`}
-          ></span>
-        </button>
+        <Fade bottom>
+          <button
+            type="button"
+            onClick={toggleShowMenu}
+            className={`z-[999] flex h-4 w-9 flex-col justify-between`}
+          >
+            <span
+              className={`${showMenu ? "w-full translate-y-[10px] rotate-[45deg]" : ""} h-[2px] w-1/2 bg-white transition-all duration-[600ms]`}
+            ></span>
+            <span
+              className={`${showMenu ? "scale-0" : "scale-100"} h-[2px] w-full bg-white transition-all duration-[600ms]`}
+            ></span>
+            <span
+              className={`${showMenu ? "w-full -translate-y-[5px] -rotate-[45deg]" : ""} h-[2px] w-1/2 self-end bg-white transition-all duration-[600ms]`}
+            ></span>
+          </button>
+        </Fade>
       </header>
     </div>
   );
