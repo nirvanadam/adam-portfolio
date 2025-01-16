@@ -1,0 +1,9 @@
+@import url("assets/fonts/css/clash-grotesk.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "ClashGrotesk-Variable";
+  scroll-behavior: smooth;
+}
