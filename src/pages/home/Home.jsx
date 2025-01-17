@@ -18,6 +18,7 @@ import usa from "../../assets/icons/usa.png";
 import { workExperiences } from "../../data/workExperiences";
 import { orgExperiences } from "../../data/orgExperiences";
 import { techStack } from "../../data/techStack";
+import { projects } from "../../data/projects";
 
 // Component
 import WorkExperiences from "../../components/pages/experience/WorkExperiences";
@@ -27,6 +28,7 @@ import TechStack from "../../components/pages/about/TechStack";
 import Navbar from "../../components/navbar/Navbar";
 import { Link } from "react-router-dom";
 import { Fade, Flip, Zoom } from "react-reveal";
+import ProjectCard from "../../components/pages/experience/ProjectCard";
 
 function Home() {
   const { showResumeMenu, setShowMenu, toggleShowResumeMenu } =
@@ -114,7 +116,7 @@ function Home() {
 
         <Fade bottom>
           <a
-            href="#experience"
+            href="#about"
             className="group absolute bottom-10 right-10 flex items-center justify-center overflow-hidden"
           >
             <span className="text-5xl font-medium">[</span>
@@ -249,16 +251,11 @@ function Home() {
               <Fade bottom>
                 <a
                   href="/about"
-                  className="group relative flex w-fit items-center gap-5 bg-background-secondary px-5 py-4 text-textColor-primary"
+                  className="group relative flex w-fit items-center gap-3 bg-background-secondary px-4 py-3 text-textColor-primary"
                 >
-                  <div className="relative flex overflow-hidden">
-                    <h1 className="font-medium uppercase transition-all duration-500 group-hover:-translate-y-full">
-                      More About Me
-                    </h1>
-                    <h1 className="absolute translate-y-full font-medium uppercase transition-all duration-500 group-hover:translate-y-0">
-                      More About Me
-                    </h1>
-                  </div>
+                  <h1 className="font-medium transition-all duration-500">
+                    More About Me
+                  </h1>
 
                   <div className="relative flex overflow-hidden">
                     <ArrowUpRight className="transition-all duration-500 group-hover:-translate-y-full group-hover:translate-x-full" />
@@ -272,20 +269,18 @@ function Home() {
                   <button
                     type="button"
                     onClick={toggleShowResumeMenu}
-                    className="group relative z-20 flex w-fit items-center gap-3 bg-background-accent px-5 py-4 font-medium uppercase text-textColor-primary"
+                    className="group relative z-20 flex w-fit items-center gap-3 bg-background-accent px-4 py-3 font-medium text-textColor-primary"
                   >
-                    <div className="relative flex overflow-hidden">
-                      <h1 className="font-medium uppercase transition-all duration-500 group-hover:-translate-y-full">
-                        Download Resume
-                      </h1>
-                      <h1 className="absolute translate-y-full font-medium uppercase transition-all duration-500 group-hover:translate-y-0">
-                        Download Resume
-                      </h1>
-                    </div>
+                    <h1 className="font-medium transition-all duration-500">
+                      Download Resume
+                    </h1>
 
-                    <ChevronDown
-                      className={`${showResumeMenu ? "rotate-180" : "rotate-0"} transition-all duration-500`}
-                    />
+                    <div
+                      className={`${showResumeMenu ? "rotate-180" : "rotate-0"} relative flex overflow-hidden transition-all duration-500`}
+                    >
+                      <ChevronDown className="absolute -translate-y-[150%] transition-all duration-500 group-hover:translate-y-0" />
+                      <ChevronDown className="transition-all duration-500 group-hover:translate-y-[150%]" />
+                    </div>
                   </button>
 
                   <div
@@ -442,50 +437,20 @@ function Home() {
             </Fade>
           </div>
 
-          <div className="mt-20 flex flex-col items-center gap-14 md:gap-24 lg:mt-40 lg:gap-28">
-            <Fade bottom>
-              <a href="#" className="group relative overflow-hidden lg:w-3/4">
-                <img
-                  src={sampelpic}
-                  alt=""
-                  className="grayscale transition duration-500 group-hover:scale-125"
+          <div className="mt-20 flex flex-col items-center gap-14 md:gap-24 lg:mt-40 lg:gap-28 xl:grid xl:grid-cols-2 xl:gap-20">
+            {projects.map((project, index) => (
+              <Fade bottom key={index}>
+                <ProjectCard
+                  key={index}
+                  title={project.title}
+                  institution={project.institution}
+                  description={project.description}
+                  image={project.image}
+                  link={project.link}
+                  github={project.github}
                 />
-                <h1 className="absolute left-3 top-3 z-10 text-[2vw] font-bold uppercase text-black transition lg:left-10 lg:top-7 lg:text-[1.5vw] lg:opacity-0 lg:group-hover:opacity-100">
-                  QuickTix
-                </h1>
-
-                <h1 className="lg: absolute right-3 top-3 z-10 text-[2vw] font-bold uppercase text-black transition lg:right-10 lg:top-7 lg:text-[1.5vw] lg:opacity-0 lg:group-hover:opacity-100">
-                  Binar Academy • 2023
-                </h1>
-
-                <div className="absolute bottom-5 right-5 z-10 rounded-full bg-white p-2 shadow-2xl transition duration-500 sm:p-5 lg:bottom-1/2 lg:right-1/2 lg:translate-x-1/2 lg:opacity-0 lg:group-hover:opacity-100">
-                  <ArrowUpRight color="#000000" className="size-5 lg:size-6" />
-                </div>
-                <div className="absolute left-0 top-0 h-full w-full bg-black opacity-0 transition duration-500 lg:group-hover:opacity-30"></div>
-              </a>
-            </Fade>
-
-            <Fade bottom>
-              <a href="#" className="group relative overflow-hidden lg:w-3/4">
-                <img
-                  src={sampelpic}
-                  alt=""
-                  className="grayscale transition duration-500 group-hover:scale-125"
-                />
-                <h1 className="absolute left-3 top-3 z-10 text-[2vw] font-bold uppercase text-black transition lg:left-10 lg:top-7 lg:text-[1.5vw] lg:opacity-0 lg:group-hover:opacity-100">
-                  QuickTix
-                </h1>
-
-                <h1 className="lg: absolute right-3 top-3 z-10 text-[2vw] font-bold uppercase text-black transition lg:right-10 lg:top-7 lg:text-[1.5vw] lg:opacity-0 lg:group-hover:opacity-100">
-                  Binar Academy • 2023
-                </h1>
-
-                <div className="absolute bottom-5 right-5 z-10 rounded-full bg-white p-2 shadow-2xl transition duration-500 sm:p-5 lg:bottom-1/2 lg:right-1/2 lg:translate-x-1/2 lg:opacity-0 lg:group-hover:opacity-100">
-                  <ArrowUpRight color="#000000" className="size-5 lg:size-6" />
-                </div>
-                <div className="absolute left-0 top-0 h-full w-full bg-black opacity-0 transition duration-500 lg:group-hover:opacity-30"></div>
-              </a>
-            </Fade>
+              </Fade>
+            ))}
           </div>
         </article>
       </section>

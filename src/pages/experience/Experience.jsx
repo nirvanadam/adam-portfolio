@@ -16,6 +16,8 @@ import WorkExperiences from "../../components/pages/experience/WorkExperiences";
 import OrgExperiences from "../../components/pages/experience/OrgExperiences";
 import Footer from "../../components/footer/Footer";
 import { Fade } from "react-reveal";
+import { projects } from "../../data/projects";
+import ProjectCard from "../../components/pages/experience/ProjectCard";
 
 function Experience() {
   return (
@@ -159,50 +161,20 @@ function Experience() {
             </Fade>
           </div>
 
-          <div className="mt-20 flex flex-col items-center gap-14 md:gap-24 lg:mt-40 lg:gap-28">
-            <Fade bottom>
-              <a href="#" className="group relative overflow-hidden lg:w-3/4">
-                <img
-                  src={sampelpic}
-                  alt=""
-                  className="grayscale transition duration-500 group-hover:scale-125"
+          <div className="mt-20 flex flex-col items-center gap-14 md:gap-24 lg:mt-40 lg:gap-28 xl:grid xl:grid-cols-2 xl:gap-20">
+            {projects.map((project, index) => (
+              <Fade bottom key={index}>
+                <ProjectCard
+                  key={index}
+                  title={project.title}
+                  institution={project.institution}
+                  description={project.description}
+                  image={project.image}
+                  link={project.link}
+                  github={project.github}
                 />
-                <h1 className="absolute left-3 top-3 z-10 text-[2vw] font-bold uppercase text-black transition lg:left-10 lg:top-7 lg:text-[1.5vw] lg:opacity-0 lg:group-hover:opacity-100">
-                  QuickTix
-                </h1>
-
-                <h1 className="lg: absolute right-3 top-3 z-10 text-[2vw] font-bold uppercase text-black transition lg:right-10 lg:top-7 lg:text-[1.5vw] lg:opacity-0 lg:group-hover:opacity-100">
-                  Binar Academy • 2023
-                </h1>
-
-                <div className="absolute bottom-5 right-5 z-10 rounded-full bg-white p-5 shadow-2xl transition duration-500 lg:bottom-1/2 lg:right-1/2 lg:translate-x-1/2 lg:opacity-0 lg:group-hover:opacity-100">
-                  <ArrowUpRight color="#000000" />
-                </div>
-                <div className="absolute left-0 top-0 h-full w-full bg-black opacity-0 transition duration-500 lg:group-hover:opacity-30"></div>
-              </a>
-            </Fade>
-
-            <Fade bottom>
-              <a href="#" className="group relative overflow-hidden lg:w-3/4">
-                <img
-                  src={sampelpic}
-                  alt=""
-                  className="grayscale transition duration-500 group-hover:scale-125"
-                />
-                <h1 className="absolute left-3 top-3 z-10 text-[2vw] font-bold uppercase text-black transition lg:left-10 lg:top-7 lg:text-[1.5vw] lg:opacity-0 lg:group-hover:opacity-100">
-                  QuickTix
-                </h1>
-
-                <h1 className="lg: absolute right-3 top-3 z-10 text-[2vw] font-bold uppercase text-black transition lg:right-10 lg:top-7 lg:text-[1.5vw] lg:opacity-0 lg:group-hover:opacity-100">
-                  Binar Academy • 2023
-                </h1>
-
-                <div className="absolute bottom-5 right-5 z-10 rounded-full bg-white p-5 shadow-2xl transition duration-500 lg:bottom-1/2 lg:right-1/2 lg:translate-x-1/2 lg:opacity-0 lg:group-hover:opacity-100">
-                  <ArrowUpRight color="#000000" />
-                </div>
-                <div className="absolute left-0 top-0 h-full w-full bg-black opacity-0 transition duration-500 lg:group-hover:opacity-30"></div>
-              </a>
-            </Fade>
+              </Fade>
+            ))}
           </div>
         </article>
       </section>

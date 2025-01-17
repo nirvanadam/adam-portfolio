@@ -379,7 +379,7 @@ function About() {
               <button
                 onClick={() => {
                   window.open(
-                    "/files/Nirvan Adam_Professional CV.pdf",
+                    "/files/Nirvan Adam_Professional CV_EN.pdf",
                     "_blank",
                   );
                 }}
