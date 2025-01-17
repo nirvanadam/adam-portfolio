@@ -67,14 +67,18 @@ function Home() {
             </h1>
           </Fade>
 
-          <div className="col-span-2 mt-14 flex flex-col gap-3 font-medium sm:w-[400px] md:mt-0 xl:w-[550px]">
+          <div className="font- col-span-2 mt-14 flex flex-col gap-3 sm:w-[400px] md:mt-0 xl:w-[550px]">
             <Fade bottom>
-              <h1 className="flex gap-1 text-lg text-textColor-secondary sm:text-2xl md:hidden">
-                <span className="text-lg text-textColor-secondary sm:text-2xl">
+              <h1 className="flex gap-1 text-lg font-medium text-textColor-secondary sm:text-2xl">
+                <span className="text-lg text-textColor-secondary sm:text-2xl md:hidden">
                   [
                 </span>
                 <Typewriter
-                  words={["Hello there!", "Welcome to my website!"]}
+                  words={[
+                    "Hello there!",
+                    "Welcome to my portfolio",
+                    "Discover my creations!",
+                  ]}
                   loop={true}
                   cursor
                   cursorStyle="_"
@@ -82,16 +86,11 @@ function Home() {
                   deleteSpeed={50}
                   delaySpeed={1500}
                 />
-                <span className="text-lg text-textColor-secondary sm:text-2xl">
+                <span className="text-lg text-textColor-secondary sm:text-2xl md:hidden">
                   ]
                 </span>
               </h1>
-            </Fade>
-            <Fade bottom>
-              <h1 className="hidden text-lg text-textColor-secondary md:block">
-                Hello there!
-              </h1>
-              <p className="text-xl sm:text-2xl lg:text-3xl">
+              <p className="text-xl leading-tight sm:text-2xl lg:text-3xl">
                 I’m Nirvan Adam, a passionate Frontend Developer and IT
                 enthusiast, dedicated to crafting seamless and innovative
                 digital experiences.
