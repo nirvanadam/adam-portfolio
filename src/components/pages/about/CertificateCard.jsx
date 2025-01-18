@@ -14,7 +14,7 @@ function CertificateCard({
   return (
     <div className="md:grid md:grid-cols-2 md:gap-10 lg:gap-16">
       <Fade bottom>
-        <div className="overflow-hidden bg-background-secondary p-6 sm:p-10 md:p-7 lg:p-10 xl:p-12 2xl:p-16">
+        <div className="h-fit overflow-hidden bg-background-secondary p-6 sm:p-10 md:p-7 lg:p-10 xl:p-12 2xl:p-16">
           <img
             src={image}
             alt=""
