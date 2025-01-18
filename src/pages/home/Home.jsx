@@ -268,7 +268,7 @@ function Home() {
                   <button
                     type="button"
                     onClick={toggleShowResumeMenu}
-                    className="group relative z-20 flex w-fit items-center gap-3 bg-background-accent px-4 py-3 font-medium text-textColor-primary"
+                    className="group relative z-20 flex w-fit items-center gap-3 bg-white px-4 py-3 font-medium text-black"
                   >
                     <h1 className="font-medium transition-all duration-500">
                       Download Resume

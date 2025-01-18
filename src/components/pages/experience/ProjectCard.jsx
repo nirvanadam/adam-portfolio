@@ -23,7 +23,7 @@ function ProjectCard({ title, institution, description, image, link, github }) {
             {institution}
           </h1>
         </div>
-        <p className="mt-3 text-[5vw] font-medium text-textColor-secondary sm:text-[2.5vw] lg:text-[1.8vw] lg:leading-tight xl:text-[1.5vw] 2xl:text-[1vw]">
+        <p className="mt-3 text-[4vw] font-medium text-textColor-secondary sm:text-[2.5vw] lg:text-[1.8vw] lg:leading-tight xl:text-[1.5vw] 2xl:text-[1vw]">
           {description}
         </p>
       </div>

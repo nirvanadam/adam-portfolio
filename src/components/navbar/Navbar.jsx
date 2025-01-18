@@ -17,7 +17,7 @@ function Navbar() {
   return (
     <div>
       <nav
-        className={`${showMenu ? "z-[999]" : "-z-10"} fixed flex h-screen w-full`}
+        className={`${showMenu ? "z-[999]" : "-z-10 delay-[1200ms]"} fixed flex h-screen w-full`}
       >
         <span
           className={`${showMenu ? "translate-y-0" : "-translate-y-full delay-[900ms]"} z-[999] h-screen w-1/3 bg-background-secondary transition-all duration-300`}
