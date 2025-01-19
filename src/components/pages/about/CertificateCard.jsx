@@ -63,16 +63,12 @@ function CertificateCard({
               window.open(`/files/certificate/${file}`, "_blank");
             }}
             href={file}
-            className="group mt-5 flex w-fit items-center justify-between gap-5 overflow-hidden bg-white px-4 py-3 text-black"
+            className="group mt-5 flex w-fit items-center justify-between gap-3 overflow-hidden bg-white px-4 py-3 text-black"
           >
-            <div className="relative flex font-medium uppercase">
-              <h1 className="transition-all duration-500 group-hover:-translate-y-[150%]">
-                View Certificate
-              </h1>
-              <h1 className="absolute translate-y-[150%] transition-all duration-500 group-hover:translate-y-0">
-                View Certificate
-              </h1>
-            </div>
+            <h1 className="font-medium transition-all duration-500">
+              View Certificate
+            </h1>
+
             <div className="relative flex overflow-hidden">
               <ArrowRight className="transition-all duration-500 group-hover:translate-x-full" />
               <ArrowRight className="absolute -translate-x-full transition-all duration-500 group-hover:translate-x-0" />
