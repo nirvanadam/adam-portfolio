@@ -138,7 +138,7 @@ function Navbar() {
               className={`${showMenu ? "w-full translate-y-[10px] rotate-[45deg]" : ""} h-[2px] w-1/2 bg-white transition-all duration-[600ms]`}
             ></span>
             <span
-              className={`${showMenu ? "scale-0" : "scale-100"} h-[2px] w-full bg-white transition-all duration-[600ms]`}
+              className={`${showMenu ? "scale-0" : "scale-100"} h-[2px] w-full bg-white transition-all duration-[300ms]`}
             ></span>
             <span
               className={`${showMenu ? "w-full -translate-y-[5px] -rotate-[45deg]" : ""} h-[2px] w-1/2 self-end bg-white transition-all duration-[600ms]`}

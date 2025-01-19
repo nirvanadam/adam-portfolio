@@ -22,7 +22,7 @@ export const certificates = [
   },
   {
     title: "Certificate of Completion: Frontend Javascript",
-    institution: "Bincar Academy",
+    institution: "Binar Academy",
     credentialId: "FES2302KM4041",
     year: "Jun 2023",
     image: fe_binar,
@@ -31,7 +31,7 @@ export const certificates = [
   {
     title:
       "Certificate of Appreciation: The Most Progressive Student in Binar Academy Bootcamp",
-    institution: "Bincar Academy",
+    institution: "Binar Academy",
     credentialId: "-",
     year: "Jun 2023",
     image: most_fe,
