@@ -6,6 +6,10 @@ import tailwind from "../assets/icons/tailwind.svg";
 import vite from "../assets/icons/vite.svg";
 import git from "../assets/icons/git.svg";
 import github from "../assets/icons/github.svg";
+import postman from "../assets/icons/postman.svg";
+import php from "../assets/icons/php.svg";
+import sql from "../assets/icons/sql.svg";
+import mysql from "../assets/icons/mysql.svg";
 
 export const techStack = [
   {
@@ -31,6 +35,22 @@ export const techStack = [
   {
     title: "Vite",
     image: vite,
+  },
+  {
+    title: "Postman",
+    image: postman,
+  },
+  {
+    title: "PHP",
+    image: php,
+  },
+  {
+    title: "SQL",
+    image: sql,
+  },
+  {
+    title: "MySQL",
+    image: mysql,
   },
   {
     title: "Git",

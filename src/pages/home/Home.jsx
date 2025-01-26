@@ -90,7 +90,7 @@ function Home() {
                   ]
                 </span>
               </h1>
-              <p className="text-xl leading-tight sm:text-2xl lg:text-3xl">
+              <p className="text-xl font-medium leading-tight sm:text-2xl lg:text-3xl">
                 I’m Nirvan Adam, a passionate Frontend Developer and IT
                 enthusiast, dedicated to crafting seamless and innovative
                 digital experiences.
