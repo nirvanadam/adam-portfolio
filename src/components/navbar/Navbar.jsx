@@ -1,7 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router";
 import { AppContext } from "../../context/AppContext";
-import { Fade } from "react-reveal";
+
+// Animate.css
+import "animate.css";
 
 function Navbar() {
   const { showMenu, setShowMenu, toggleShowMenu } = useContext(AppContext);
@@ -119,32 +121,28 @@ function Navbar() {
       <header
         className={`flex h-[8vh] w-full items-center justify-between bg-black px-6 text-textColor-primary md:px-10 lg:h-[10vh] xl:px-20 2xl:px-28`}
       >
-        <Fade bottom>
-          <a
-            href="/"
-            className={`z-[999] text-lg font-medium uppercase text-textColor-primary transition 2xl:text-2xl`}
-          >
-            Adam<span className="text-textColor-accent">.</span>
-          </a>
-        </Fade>
+        <a
+          href="/"
+          className={`animate__animated animate__fadeInUp z-[999] text-lg font-medium uppercase text-textColor-primary transition 2xl:text-2xl`}
+        >
+          Adam<span className="text-textColor-accent">.</span>
+        </a>
 
-        <Fade bottom>
-          <button
-            type="button"
-            onClick={toggleShowMenu}
-            className={`z-[999] flex h-4 w-9 flex-col justify-between`}
-          >
-            <span
-              className={`${showMenu ? "w-full translate-y-[10px] rotate-[45deg]" : ""} h-[2px] w-1/2 bg-white transition-all duration-[600ms]`}
-            ></span>
-            <span
-              className={`${showMenu ? "scale-0" : "scale-100"} h-[2px] w-full bg-white transition-all duration-[300ms]`}
-            ></span>
-            <span
-              className={`${showMenu ? "w-full -translate-y-[5px] -rotate-[45deg]" : ""} h-[2px] w-1/2 self-end bg-white transition-all duration-[600ms]`}
-            ></span>
-          </button>
-        </Fade>
+        <button
+          type="button"
+          onClick={toggleShowMenu}
+          className={`animate__animated animate__fadeInUp z-[999] flex h-4 w-9 flex-col justify-between`}
+        >
+          <span
+            className={`${showMenu ? "w-full translate-y-[10px] rotate-[45deg]" : ""} h-[2px] w-1/2 bg-white transition-all duration-[600ms]`}
+          ></span>
+          <span
+            className={`${showMenu ? "scale-0" : "scale-100"} h-[2px] w-full bg-white transition-all duration-[300ms]`}
+          ></span>
+          <span
+            className={`${showMenu ? "w-full -translate-y-[5px] -rotate-[45deg]" : ""} h-[2px] w-1/2 self-end bg-white transition-all duration-[600ms]`}
+          ></span>
+        </button>
       </header>
     </div>
   );

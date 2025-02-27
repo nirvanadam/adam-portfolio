@@ -1,10 +1,17 @@
 import React from "react";
 
+// AOS
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function OrgExperiences({ organization, position, year }) {
+  AOS.init();
+
   return (
     <button
+      data-aos="fade-up"
       type="button"
-      className="group relative flex flex-col gap-2 border-b border-gray-600 pb-5"
+      className="group relative flex flex-col items-start gap-2 border-b border-gray-600 pb-5"
     >
       <div className="flex flex-col gap-1 transition duration-300 ease-in group-hover:translate-x-7">
         <h2 className="font w-fit text-sm font-medium uppercase text-textColor-secondary xl:text-base">

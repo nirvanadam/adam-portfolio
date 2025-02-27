@@ -1,5 +1,6 @@
 import quicktix from "../assets/images/project/quicktix_banner.png";
 import ngajiaja from "../assets/images/project/ngajiaja_banner.png";
+import taskify from "../assets/images/project/taskify_banner.png";
 
 export const projects = [
   {
@@ -19,5 +20,14 @@ export const projects = [
     image: quicktix,
     link: "https://quicktix-pi.vercel.app/",
     github: "https://github.com/nirvanadam/Final-Project-BINAR",
+  },
+  {
+    title: "Taskify",
+    institution: "",
+    description:
+      "Taskify is a simple and efficient to-do app that helps you organize tasks, stay productive, and track progress effortlessly.",
+    image: taskify,
+    link: "https://adam-taskify.vercel.app/",
+    github: "https://github.com/nirvanadam/taskify-todo-app",
   },
 ];

@@ -1,11 +1,21 @@
 import { ArrowRight, ArrowUpRight, Github } from "lucide-react";
 import React, { useState } from "react";
 
+// AOS
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function ProjectCard({ title, institution, description, image, link, github }) {
   const [showProject, setShowProject] = useState(false);
 
+  AOS.init({});
+
   return (
-    <div className="relative overflow-hidden text-textColor-primary">
+    <div
+      data-aos-offset="400"
+      data-aos="zoom-in"
+      className="relative overflow-hidden text-textColor-primary"
+    >
       <div className="group relative overflow-hidden rounded-xl">
         <img
           src={image}

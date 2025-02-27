@@ -10,6 +10,7 @@ import postman from "../assets/icons/postman.svg";
 import php from "../assets/icons/php.svg";
 import sql from "../assets/icons/sql.svg";
 import mysql from "../assets/icons/mysql.svg";
+import redux from "../assets/icons/redux.svg";
 
 export const techStack = [
   {
@@ -31,6 +32,10 @@ export const techStack = [
   {
     title: "Tailwind CSS",
     image: tailwind,
+  },
+  {
+    title: "Redux",
+    image: redux,
   },
   {
     title: "Vite",

@@ -1,8 +1,18 @@
 import React from "react";
 
+// AOS
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function TechStack({ title, image }) {
+  AOS.init({});
+
   return (
-    <div className="group relative flex h-[350px] w-full flex-col items-center justify-center gap-5 bg-[#2C2C2C] transition duration-500 2xl:h-[400px]">
+    <div
+      data-aos-offset="800"
+      data-aos="zoom-in"
+      className="group relative flex h-[350px] w-full flex-col items-center justify-center gap-5 bg-[#2C2C2C] transition duration-500 2xl:h-[400px]"
+    >
       <img
         src={image}
         alt=""
