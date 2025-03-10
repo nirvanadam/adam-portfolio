@@ -11,6 +11,9 @@ import php from "../assets/icons/php.svg";
 import sql from "../assets/icons/sql.svg";
 import mysql from "../assets/icons/mysql.svg";
 import redux from "../assets/icons/redux.svg";
+import nextjs from "../assets/icons/nextjs.svg";
+import typescript from "../assets/icons/typescript.svg";
+import axios from "../assets/icons/axios.svg";
 
 export const techStack = [
   {
@@ -30,8 +33,16 @@ export const techStack = [
     image: react,
   },
   {
+    title: "Next.js",
+    image: nextjs,
+  },
+  {
     title: "Tailwind CSS",
     image: tailwind,
+  },
+  {
+    title: "TypeScript",
+    image: typescript,
   },
   {
     title: "Redux",
@@ -40,6 +51,10 @@ export const techStack = [
   {
     title: "Vite",
     image: vite,
+  },
+  {
+    title: "Axios",
+    image: axios,
   },
   {
     title: "Postman",
