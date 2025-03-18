@@ -35,6 +35,8 @@ import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import Marquee from "react-fast-marquee";
+
 function Home() {
   const { showResumeMenu, setShowMenu, toggleShowResumeMenu } =
     useContext(AppContext);
@@ -500,6 +502,14 @@ function Home() {
         </article>
       </section>
       {/* Skill Section End */}
+
+      {/* <Marquee className="h-[300px] bg-black">
+        <div className="flex gap-5">
+          {techStack.map((tech, index) => (
+            <TechStack key={index} title={tech.title} image={tech.image} />
+          ))}
+        </div>
+      </Marquee> */}
 
       {/* Footer */}
       <Footer />

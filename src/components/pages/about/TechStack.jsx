@@ -9,8 +9,8 @@ function TechStack({ title, image }) {
 
   return (
     <div
-      data-aos-offset="1000"
-      data-aos="zoom-in"
+      data-aos="flip-up"
+      data-aos-offset="500"
       className="group relative flex h-[350px] w-full flex-col items-center justify-center gap-5 bg-[#2C2C2C] transition duration-500 2xl:h-[400px]"
     >
       <img
